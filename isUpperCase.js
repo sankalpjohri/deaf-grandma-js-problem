@@ -8,18 +8,18 @@
  * @returns {boolean}
  */
 const isUppercase = (s) => {
-  var i = 0;
-  var character = '';
-  var result = true;
-  while (i <= s.length) {
+  let i = 0;
+  let character = '';
+  while (i < s.length) {
     character = s.charAt(i);
-    if (!isNaN(character * 1)) {
+    if (!isNaN(character)) {
       if (character == character.toLowerCase()) {
-        result = false;
+        return false;
       }
     }
+    i += 1;
   }
-  return result;
+  return true;
 };
 
 module.exports = isUppercase;
